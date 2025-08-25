@@ -5,29 +5,36 @@
 package com.mycompany.onlinestores1;
 
 /**
- *
+ * Gestor de descuentos implementado como Singleton.
+ * Garantiza una única instancia para la gestión centralizada de descuentos.
  * @author Alex Fernández
  */
 // Clase Singleton: DiscountManager
 public class DiscountManager {
     
-    // 1. Variable estática privada que contendrá la única instancia
-    private static DiscountManager instance;
+    // 1. Variable estática privada final que contendrá la única instancia
+    private static final DiscountManager instance = new DiscountManager();
     
-    // 2. Constructor privado (evita instanciación externa)
+    /**
+     * Constructor privado para evitar instanciación externa.
+     * Solo se ejecuta una vez durante la carga de la clase.
+     */
     private DiscountManager() {
         System.out.println("[SINGLETON] Gestor de descuentos creado.");
     }
     
-    // 3. Método estático público para obtener la instancia única
+    /**
+     * Retorna la única instancia del DiscountManager.
+     * Thread-safe y eficiente mediante inicialización temprana.
+     */
     public static DiscountManager getInstance() {
-        if (instance == null) {
-            instance = new DiscountManager();
-        }
         return instance;
     }
 
-    // Método ejemplo: aplicar descuento
+    /**
+     * Aplica un porcentaje de descuento al precio base.
+     * Calcula y retorna el precio final después del descuento.
+     */
     public double applyDiscount(double price, double discountPercent) {
         double discount = price * (discountPercent / 100);
         return price - discount;

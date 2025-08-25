@@ -18,15 +18,30 @@ src/
 
 
 
-## 📌 Example Output
-When running `Main`, you’ll see something like:
-
+## 📂 Project Structure
 ```text
-Gestor de descuentos creado.
-Camisa: Precio original $50000.0 | Precio con descuento (15%): $42500.0
-Pantalón: Precio original $80000.0 | Precio con descuento (20%): $64000.0
-Zapatos: Precio original $120000.0 | Precio con descuento (10%): $108000.0
-¿Manager y otroManager son la misma instancia? true
+src/main/java/com/mycompany/onlinestores1/
+├── DiscountManager.java   # Singleton class (enhanced)
+└── OnlineStoreS1.java     # Main class with demonstration
+```
+
+
+## 📌 Example Output
+```text
+=============================================================
+                   Tienda Online - Grupo 17                 
+=============================================================
+
+--- APLICACION DE DESCUENTOS A PRODUCTOS ---
+
+[SINGLETON] Gestor de descuentos creado.
+Camisa     | $  50,000 -> $  42,500 (15% desc.) | Ahorro: $ 7,500
+Pantalón   | $  80,000 -> $  64,000 (20% desc.) | Ahorro: $16,000
+Zapatos    | $ 120,000 -> $ 108,000 (10% desc.) | Ahorro: $12,000
+Chaqueta   | $ 150,000 -> $ 112,500 (25% desc.) | Ahorro: $37,500
+Reloj      | $ 300,000 -> $ 210,000 (30% desc.) | Ahorro: $90,000
+Bolso      | $  75,000 -> $  71,250 ( 5% desc.) | Ahorro: $ 3,750
+---------------------------------------------
 ```
 
 ## 👤 Author
